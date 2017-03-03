@@ -1,8 +1,8 @@
 <?php
 include_once '../lib/dpr.php';
-
+//dpr("XD");
 $meta = unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip='."190.164.212.151"));
-echo (json_encode($meta));
+dpr($meta);
 
 $latitud = $meta['geoplugin_latitude'];
 $longitud = $meta['geoplugin_longitude'];
