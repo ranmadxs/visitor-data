@@ -8,6 +8,7 @@ header ('Content-Type: image/png');
 $im = @imagecreatetruecolor(120, 20)
 or die('No se puede Iniciar el nuevo flujo a la imagen GD');
 $color_texto = imagecolorallocate($im, 233, 14, 91);
+$jsonData = '{"REMOTE_ADDR":"'.$_SERVER["REMOTE_ADDR"].'", "HTTP_USER_AGENT":'.$_SERVER['HTTP_USER_AGENT'].'}';
 $txt = "Hola ".$_SERVER["REMOTE_ADDR"];
 $logger->info($txt);
 imagestring($im, 1, 5, 5,  $txt, $color_texto);
